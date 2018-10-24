@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:truesdk="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:gravity="center_horizontal"
+              tools:context="com.example.vijay.truecallertest.MainActivity">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/name"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/phone"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/address"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/job"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/job"/>
+
+    <TextView
+        android:id="@+id/valuesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <!--
+    You can have only one TrueButton per Activity
+    Android Studio should offer auto complete for the truesdk:truebutton_text values
+    The possibilities are:
+
+        truesdk:truebutton_text="autoFill"
+        truesdk:truebutton_text="autoFillShort"
+        truesdk:truebutton_text="signIn"
+        truesdk:truebutton_text="signInShort"
+        truesdk:truebutton_text="signUp"
+        truesdk:truebutton_text="signUpShort"
+        truesdk:truebutton_text="register"
+        truesdk:truebutton_text="registerShort"
+        truesdk:truebutton_text="cont"
+        truesdk:truebutton_text="contShort"
+
+    Defaults to "autoFill"
+    -->
+    <com.truecaller.android.sdk.TrueButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        truesdk:truebutton_text="autoFill"/>
+
+    <Button
+        android:id="@+id/customButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/custom_button"/>
+
+</LinearLayout>
